@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: jj-tasktrove_app_1
+      APP_HOST: jjunior-tasktrove_app_1
       APP_PORT: 3000
       
   app:
