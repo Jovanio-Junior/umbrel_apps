@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: jovanio-tasktrove_app_1
+      APP_PORT: 3000
+      
+  app:
+    image: ghcr.io/dohsimpson/tasktrove:v0.12.4@sha256:ecfda986ed36909cde78cbdec8b3b39eb60e39be41df3e42afdb102baba9850b
+    user: "1000:1000"
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data:rw
